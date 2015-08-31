@@ -14,7 +14,7 @@ fi
 
 charged_slots=$(echo "((($current_charge/$total_charge)*10)/3)+1" | bc -l | cut -d '.' -f 1)
 if [[ $charged_slots -gt 3 ]]; then
-  charged_slots=5
+  charged_slots=3
 fi
 
 echo -n '#[fg=colour196]'
