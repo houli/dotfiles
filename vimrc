@@ -6,6 +6,12 @@ Plug 'bling/vim-airline'
 Plug 'chriskempson/base16-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 Plug 'Valloric/YouCompleteMe'
+Plug 'tpope/vim-vinegar'
+Plug 'tpope/vim-surround'
+Plug 'jiangmiao/auto-pairs'
+Plug 'vim-ruby/vim-ruby'
+Plug 'pangloss/vim-javascript'
+Plug 'othree/html5.vim'
 
 call plug#end()
 
@@ -13,6 +19,8 @@ let g:airline_theme='badwolf'
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
 set guifont=Monaco\ for\ Powerline:h13
+set laststatus=2 " always show status line
+set noshowmode
 syntax on
 set number
 set numberwidth=4
@@ -26,7 +34,6 @@ set ttyfast
 set noerrorbells
 set visualbell
 set ttimeoutlen=50
-set laststatus=2 " always show status line
 set updatetime=1000
 set list listchars=tab:»·,trail:·,nbsp:· " show extra whitespace
 set textwidth=80
@@ -58,6 +65,11 @@ highlight Visual       ctermbg=3   ctermfg=0
 highlight Pmenu        ctermbg=240 ctermfg=12
 highlight PmenuSel     ctermbg=3   ctermfg=1
 highlight SpellBad     ctermbg=0   ctermfg=1
+" Git gutter colors
+highlight GitGutterAdd ctermbg=black
+highlight GitGutterChange ctermbg=black
+highlight GitGutterDelete ctermbg=black
+highlight GitGutterChangeDelete ctermbg=black
 
 let mapleader=","
 nnoremap <C-p> :FZF<CR>
