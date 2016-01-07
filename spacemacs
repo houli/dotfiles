@@ -33,7 +33,10 @@ values."
      c-c++
      html
      javascript
-     ruby
+     (ruby :variables
+           ruby-test-runner 'rspec
+           ruby-version-manager 'rbenv)
+     ruby-on-rails
      themes-megapack
      markdown
      org
@@ -41,7 +44,6 @@ values."
      evil-snipe
      vinegar
      vim-powerline
-     vim-empty-lines
      (shell :variables
             shell-default-height 25
             shell-default-position 'bottom
@@ -50,6 +52,7 @@ values."
      syntax-checking
      version-control
      dash
+     gnus
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -261,8 +264,6 @@ layers configuration. You are free to put any user code."
   (setq-default mac-right-option-modifier nil)
   (spacemacs/toggle-mode-line-battery-on)
   (blink-cursor-mode)
-  ;; Silly vim tildes no longer show up in which-key
-  (add-hook 'which-key-init-buffer-hook (lambda () (vim-empty-lines-mode -1)))
   ;; Stop evil state change messages from appearing in the minibuffer
   (setq evil-echo-state nil)
   ;; Remove annoying "follow symlink?" message
