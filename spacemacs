@@ -49,6 +49,7 @@ values."
      ;; spell-checking
      syntax-checking
      (version-control :variables
+                      version-control-diff-tool 'diff-hl
                       version-control-global-margin t)
      dash
      gnus
