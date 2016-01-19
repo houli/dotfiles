@@ -24,7 +24,6 @@ values."
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      auto-completion
-     better-defaults
      emacs-lisp
      git
      osx
@@ -43,14 +42,14 @@ values."
      eyebrowse
      evil-snipe
      vinegar
-     vim-powerline
      (shell :variables
             shell-default-height 25
             shell-default-position 'bottom
             shell-default-shell 'eshell)
      ;; spell-checking
      syntax-checking
-     version-control
+     (version-control :variables
+                      version-control-global-margin t)
      dash
      gnus
      )
@@ -108,6 +107,8 @@ values."
    ;; Number of recent files to show in the startup buffer. Ignored if
    ;; `dotspacemacs-startup-lists' doesn't include `recents'. (default 5)
    dotspacemacs-startup-recent-list-size 5
+   ;; Default major mode of the scratch buffer (default `text-mode')
+   dotspacemacs-scratch-mode 'org-mode
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
@@ -183,7 +184,7 @@ values."
    dotspacemacs-helm-position 'bottom
    ;; If non nil the paste micro-state is enabled. When enabled pressing `p`
    ;; several times cycle between the kill ring content. (default nil)
-   dotspacemacs-enable-paste-micro-state nil
+   dotspacemacs-enable-paste-micro-state t
    ;; Which-key delay in seconds. The which-key buffer is the popup listing
    ;; the commands bound to the current keystroke sequence. (default 0.4)
    dotspacemacs-which-key-delay 0.4
@@ -233,7 +234,7 @@ values."
    dotspacemacs-highlight-delimiters 'all
    ;; If non nil advises quit functions to keep server open when quitting.
    ;; (default nil)
-   dotspacemacs-persistent-server nil
+   dotspacemacs-persistent-server t
    ;; List of search tool executable names. Spacemacs uses the first installed
    ;; tool of the list. Supported tools are `ag', `pt', `ack' and `grep'.
    ;; (default '("ag" "pt" "ack" "grep"))
@@ -268,6 +269,13 @@ layers configuration. You are free to put any user code."
   (setq evil-echo-state nil)
   ;; Remove annoying "follow symlink?" message
   (setq vc-follow-symlinks t)
+  (setq diff-hl-side 'left)
+  (setq
+    web-mode-markup-indent-offset 2
+    web-mode-css-indent-offset 2
+    web-mode-code-indent-offset 2
+    )
+  (setq-default js2-basic-offset 2)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
