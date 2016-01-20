@@ -271,6 +271,8 @@ layers configuration. You are free to put any user code."
   ;; Remove annoying "follow symlink?" message
   (setq vc-follow-symlinks t)
   (setq diff-hl-side 'left)
+  ;; Diffing without saving buffers
+  (diff-hl-flydiff-mode)
   (setq
     web-mode-markup-indent-offset 2
     web-mode-css-indent-offset 2
