@@ -24,38 +24,39 @@ values."
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      (auto-completion :variables
-                      auto-completion-enable-snippets-in-popup t
-                      auto-completion-enable-help-tooltip t)
-     emacs-lisp
-     git
-     osx
-     haskell
-     elm
-     erlang
+                      auto-completion-enable-snippets-in-popup t)
      c-c++
+     dash
+     elixir
+     elm
+     emacs-lisp
+     erlang
+     evil-snipe
+     git
+     gnus
+     haskell
      html
      javascript
+     markdown
+     org
+     osx
+     purescript
+     react
      (ruby :variables
            ruby-test-runner 'rspec
            ruby-version-manager 'rbenv)
      ruby-on-rails
-     themes-megapack
-     markdown
-     org
-     evil-snipe
-     vinegar
-     unimpaired
      (shell :variables
             shell-default-height 25
             shell-default-position 'bottom
             shell-default-shell 'eshell)
-     ;; spell-checking
      syntax-checking
+     themes-megapack
+     unimpaired
      (version-control :variables
                       version-control-diff-tool 'diff-hl
                       version-control-global-margin t)
-     dash
-     gnus
+     vinegar
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -116,7 +117,7 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(monokai
+   dotspacemacs-themes '(apropospriate-dark
                          spacemacs-dark
                          spacemacs-light
                          solarized-light
