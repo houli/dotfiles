@@ -282,6 +282,8 @@ layers configuration. You are free to put any user code."
     web-mode-code-indent-offset 2
     )
   (setq-default js2-basic-offset 2)
+  ;; Underscores are part of words
+  (modify-syntax-entry ?_ "w")
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
