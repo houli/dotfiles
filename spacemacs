@@ -53,6 +53,7 @@ values."
      idris
      javascript
      markdown
+     nlinum
      org
      osx
      purescript
@@ -66,7 +67,6 @@ values."
             shell-default-position 'bottom
             shell-default-shell 'eshell)
      syntax-checking
-     unimpaired
      (version-control :variables
                       version-control-diff-tool 'diff-hl
                       version-control-global-margin t)
