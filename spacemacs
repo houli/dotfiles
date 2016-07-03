@@ -36,6 +36,7 @@ values."
      gnus
      haskell
      html
+     idris
      javascript
      markdown
      org
@@ -51,7 +52,6 @@ values."
             shell-default-position 'bottom
             shell-default-shell 'eshell)
      syntax-checking
-     themes-megapack
      unimpaired
      (version-control :variables
                       version-control-diff-tool 'diff-hl
