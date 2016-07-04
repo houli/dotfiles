@@ -47,7 +47,8 @@ values."
      evil-snipe
      git
      gnus
-     haskell
+     (haskell :variables
+              haskell-completion-backend 'intero)
      helm
      html
      idris
