@@ -66,7 +66,7 @@ values."
      (shell :variables
             shell-default-height 25
             shell-default-position 'bottom
-            shell-default-shell 'eshell)
+            shell-default-shell 'ansi-term)
      syntax-checking
      (version-control :variables
                       version-control-diff-tool 'diff-hl
@@ -325,6 +325,12 @@ you should place your code here."
   (setq-default js2-basic-offset 2)
   ;; Enable golden ratio mode
   (spacemacs/toggle-golden-ratio-on)
+  ;; Filthy hacks to get correct escape sequences
+  (advice-add 'ansi-term
+              :after
+              (lambda (_)
+                (comint-send-string "*ansi-term*"
+                                    "export TERM=xterm-256color && clear\n")))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
