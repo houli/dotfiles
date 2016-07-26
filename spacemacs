@@ -46,7 +46,6 @@ values."
      erlang
      evil-snipe
      git
-     gnus
      (haskell :variables
               haskell-completion-backend 'intero)
      helm
@@ -72,6 +71,7 @@ values."
                       version-control-diff-tool 'diff-hl
                       version-control-global-margin t)
      vinegar
+     yaml
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
