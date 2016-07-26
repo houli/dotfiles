@@ -332,6 +332,10 @@ you should place your code here."
                 (comint-send-string "*ansi-term*"
                                     "export TERM=xterm-256color && clear\n")))
   (mac-auto-operator-composition-mode)
+  ;; Use hlint with Intero
+  (with-eval-after-load 'intero
+    (flycheck-add-next-checker 'intero
+                               '(warning . haskell-hlint)))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
