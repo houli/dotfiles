@@ -1,0 +1,7 @@
+[user]
+	name = Eoin Houlihan
+	email = ehoulih@tcd.ie
+[push]
+	default = simple
+[core]
+	editor = emacsclient -t

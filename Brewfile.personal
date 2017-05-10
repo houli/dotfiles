@@ -1,0 +1,32 @@
+# My personal laptop
+tap 'homebrew/services'
+
+brew 'coq'
+brew 'elixir'
+brew 'elm'
+brew 'erlang'
+brew 'haskell-stack'
+brew 'idris'
+brew 'nvm'
+brew 'pandoc'
+brew 'postgresql', restart_service: true
+brew 'purescript'
+brew 'rbenv'
+brew 'ruby-build'
+cask 'java' # Scala and sbt need a Java
+brew 'sbt'
+brew 'scala'
+brew 'sqlite'
+brew 'watchman'
+
+cask 'battle-net'
+cask 'dropbox'
+cask 'obs'
+cask 'openemu'
+cask 'soundflower'
+cask 'steam'
+cask 'transmission'
+cask 'vlc'
+
+mas 'Kindle', id: 405399194
+mas 'Pocket', id: 568494494
