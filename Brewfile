@@ -1,7 +1,6 @@
 # Core Brewfile
 tap 'caskroom/cask'
 tap 'caskroom/fonts'
-tap 'neovim/neovim'
 tap 'railwaycat/emacsmacport'
 
 brew 'autojump'
@@ -11,16 +10,17 @@ brew 'git'
 brew 'htop'
 brew 'httpie'
 brew 'mas'
-brew 'neovim/neovim/neovim'
+brew 'neovim'
 brew 'python'
-brew 'python3'
-brew 'railwaycat/emacsmacport/emacs-mac', args: ['with-gnutls', 'with-imagemagick', 'with-natural-title-bar', 'with-official-icon', 'with-xml2']
+brew 'railwaycat/emacsmacport/emacs-mac', args: ['with-gnutls', 'with-imagemagick', 'with-official-icon', 'with-xml2']
+brew 'ripgrep'
+brew 'shellcheck'
 brew 'stow'
-brew 'the_platinum_searcher'
 brew 'tmux'
 brew 'tree'
 brew 'wget'
 
+cask '1password'
 cask 'alfred'
 cask 'docker'
 cask 'firefox'

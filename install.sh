@@ -37,7 +37,6 @@ defaults write org.gnu.Emacs TransparentTitleBar DARK
 if [[ $REPLY =~ ^[Yy]$ ]]; then
     brew bundle --file=Brewfile.personal
 
-    cat zsh/zshenv-personal.sh >> ~/.zshenv
     cat zsh/zshrc-personal.sh >> ~/.zshrc
 
     # Ruby
