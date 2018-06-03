@@ -61,7 +61,6 @@ This function should only modify configuration layer settings."
      javascript
      markdown
      neotree
-     nlinum
      (org :variables
           org-enable-bootstrap-support t
           org-enable-reveal-js-support t)
@@ -94,7 +93,7 @@ This function should only modify configuration layer settings."
    ;; To use a local version of a package, use the `:location' property:
    ;; '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
-   dotspacemacs-additional-packages '(evil-goggles)
+   dotspacemacs-additional-packages '()
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -532,11 +531,6 @@ before packages are loaded."
   (with-eval-after-load 'intero
     (flycheck-add-next-checker 'intero
                                '(warning . haskell-hlint)))
-
-  ;; evil-goggles config
-  (evil-goggles-mode)
-  (evil-goggles-use-diff-faces)
-  (setq evil-goggles-duration 0.1)
 
   ;; `org-mode' config
   (with-eval-after-load 'org
